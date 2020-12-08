@@ -23,7 +23,17 @@ const onChangePasswordSuccess = function (response) {
   resetForms()
 }
 
+const onSignOutSuccess = function () {
+  $('#message').text('Sign Out successful!')
+  resetForms()
+}
+
 const onError = function (error) {
+  $('#message').text('Error: ' + error.responseJSON.message)
+  resetForms()
+}
+
+const onChangePasswordError = function (error) {
   $('#message').text('Error: ' + error.responseJSON.message)
   resetForms()
 }
@@ -32,5 +42,7 @@ module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
   onChangePasswordSuccess,
-  onError
+  onSignOutSuccess,
+  onError,
+  onChangePasswordError
 }
