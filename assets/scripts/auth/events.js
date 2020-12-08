@@ -23,7 +23,7 @@ const onChangePassword = function (event) {
   const data = getFormFields(event.target)
   api.changePassword(data)
     .then(ui.onChangePasswordSuccess)
-    .catch(ui.onChangePasswordError)
+    .catch(ui.onError)
 }
 
 const onSignOut = function (event) {

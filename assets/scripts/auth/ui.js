@@ -33,16 +33,10 @@ const onError = function (error) {
   resetForms()
 }
 
-const onChangePasswordError = function (error) {
-  $('#message').text('Error: ' + error.responseJSON.message)
-  resetForms()
-}
-
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
   onChangePasswordSuccess,
   onSignOutSuccess,
-  onError,
-  onChangePasswordError
+  onError
 }
