@@ -18,7 +18,16 @@ const onSignIn = function (event) {
     .catch(ui.onError)
 }
 
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.changePassword(data)
+    .then(ui.onChangePasswordSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onChangePassword
 }

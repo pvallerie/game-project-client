@@ -17,6 +17,12 @@ const onSignInSuccess = function (response) {
   resetForms()
 }
 
+const onChangePasswordSuccess = function (response) {
+  console.log('here is the response: ', response)
+  $('#message').text('Change Password successful!')
+  resetForms()
+}
+
 const onError = function (error) {
   $('#message').text('Error: ' + error.responseJSON.message)
   resetForms()
@@ -25,5 +31,6 @@ const onError = function (error) {
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
+  onChangePasswordSuccess,
   onError
 }
