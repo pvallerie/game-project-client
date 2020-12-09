@@ -32,13 +32,30 @@
       </div>
 
       <div class="authenticated">
+        <button id="sign-out">Sign Out</button>
+
+        <div class="container">
+          <div id="game-message" class="game">Player X, it's your turn!</div>
+          <div id="gameboard" class="row game">
+            <button id="location-1" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-2" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-3" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-4" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-5" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-6" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-7" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-8" class="col-4 gameboard-locations" type='button'>1</button>
+            <button id="location-9" class="col-4 gameboard-locations" type='button'>1</button>
+          </div>
+        </div>
+
+        <button id="new-game">New Game</button>
+
         <form id="change-password">
           <input placeholder="old password" type="text" name="passwords[old]" />
           <input placeholder="new password" type="text" name="passwords[new]" />
           <button type="submit">Change Password</button>
         </form>
-
-        <button id="sign-out">Sign Out</button>
       </div>
 
       <p id='message'></p>

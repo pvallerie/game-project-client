@@ -1,1 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+@import 'variables.scss';
+
+.gameboard-locations {
+    border: 1px solid;
+    background-color: $board-color;
+}

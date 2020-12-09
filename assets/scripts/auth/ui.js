@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   // hide unauthenticated features
   // unhide authenticated features
   $('.unauthenticated').hide()
+  $('.game').hide()
   $('.authenticated').show()
 
   resetForms()
