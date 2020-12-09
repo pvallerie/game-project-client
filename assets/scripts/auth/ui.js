@@ -13,7 +13,11 @@ const onSignInSuccess = function (response) {
   $('#message').text('Sign In successful!')
   // store the user object so we can use token later with authorized events
   store.user = response.user
-  // later will unhide hidden HTML elements with .show
+  // hide unauthenticated features
+  // unhide authenticated features
+  $('.unauthenticated').hide()
+  $('.authenticated').show()
+
   resetForms()
 }
 
@@ -25,6 +29,10 @@ const onChangePasswordSuccess = function (response) {
 
 const onSignOutSuccess = function () {
   $('#message').text('Sign Out successful!')
+  // hide authenticated features
+  // unhide unauthenticated features
+  $('.authenticated').hide()
+  $('.unauthenticated').show()
   resetForms()
 }
 

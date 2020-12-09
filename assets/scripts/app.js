@@ -8,7 +8,8 @@ const authEvents = require('./auth/events')
 // require('./example')
 
 $(() => {
-  // will eventually use .hide to hide hidden elements for unauthenticated users
+  // hide authenticated features
+  $('.authenticated').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
