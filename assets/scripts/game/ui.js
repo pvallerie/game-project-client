@@ -10,6 +10,8 @@ const onNewGameSuccess = function (response) {
 
 const onPlaceMarkerSuccess = function (response) {
   console.log(response)
+  store.game = response.game
+  console.log(store.game)
 }
 
 const onError = function (error) {

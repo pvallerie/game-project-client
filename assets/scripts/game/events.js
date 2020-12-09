@@ -11,22 +11,27 @@ const onNewGame = function (event) {
 }
 
 const onPlaceMarker = function () {
-  // grab index of gameboar location
+  // grab index data stored in button HTML
   const buttonData = $(this).data()
   // grab value of that index
   const cellIndex = buttonData.cellIndex
   const playerMarker = 'x'
-  // console.log(store.game.cell)
-  // console.log(cellIndex, playerMarker)
+  console.log('cell with index 3: ', store.game.cells[cellIndex])
   // if the index corresponding to the spot on the board is empty, player can
   // place a marker
-  // if first turn, place 'x'
-  $(this).html('X')
-  // if x just went, place 'o'
-  // place marker in the array 'user.game.cells' at the corresponding index
-  api.placeMarker(cellIndex, playerMarker)
-    .then(ui.onPlaceMarkerSuccess)
-    .catch(ui.onError)
+  if (store.game.cells[cellIndex] === ('x' || 'o')) {
+    $('#game-warning').show().text('Space taken! Please choose a different one.')
+  } else {
+    console.log('space open!')
+    // if first turn, place 'x'
+    $(this).html('X')
+    $('#game-warning').hide()
+    // if x just went, place 'o'
+    // place marker in the array 'user.game.cells' at the corresponding index
+    api.placeMarker(cellIndex, playerMarker)
+      .then(ui.onPlaceMarkerSuccess)
+      .catch(ui.onError)
+  }
 }
 
 module.exports = {
