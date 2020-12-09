@@ -5,6 +5,11 @@ const onNewGameSuccess = function (response) {
   // store the game object for access to game ID and cells
   store.game = response.game
   console.log('stored game: ', store.game)
+  console.log(store)
+}
+
+const onPlaceMarkerSuccess = function (response) {
+  console.log(response)
 }
 
 const onError = function (error) {
@@ -13,5 +18,6 @@ const onError = function (error) {
 
 module.exports = {
   onNewGameSuccess,
+  onPlaceMarkerSuccess,
   onError
 }

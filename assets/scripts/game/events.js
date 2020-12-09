@@ -1,5 +1,6 @@
 const api = require('./api')
 const ui = require('./ui')
+const store = require('./../store')
 
 const onNewGame = function (event) {
   $('.game').show()
@@ -10,10 +11,20 @@ const onNewGame = function (event) {
 }
 
 const onPlaceMarker = function () {
+  const cellIndex = $(this).data()
+  const playerMarker = 'x'
+  console.log(store.user._id)
+  // console.log(store.game.cell)
+  // console.log(cellIndex, playerMarker)
+  // if the index corresponding to the spot on the board is empty, player can
+  // place a marker
   // if first turn, place 'x'
-  console.log('place X!')
   $(this).html('X')
   // if x just went, place 'o'
+  // place marker in the array 'user.game.cells' at the corresponding index
+  // api.placeMarker(cellIndex, playerMarker)
+  //   .then(ui.onPlaceMarkerSuccess)
+  //   .catch(ui.onError)
 }
 
 module.exports = {
