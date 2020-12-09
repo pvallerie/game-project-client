@@ -14,7 +14,7 @@ const createNewGame = function (data) {
 
 const placeMarker = function (cellIndex, playerMarker) {
   return $.ajax({
-    url: config.apiUrl + '/games' + store.user._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token

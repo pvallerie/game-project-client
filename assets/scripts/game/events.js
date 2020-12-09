@@ -22,9 +22,9 @@ const onPlaceMarker = function () {
   $(this).html('X')
   // if x just went, place 'o'
   // place marker in the array 'user.game.cells' at the corresponding index
-  // api.placeMarker(cellIndex, playerMarker)
-  //   .then(ui.onPlaceMarkerSuccess)
-  //   .catch(ui.onError)
+  api.placeMarker(cellIndex, playerMarker)
+    .then(ui.onPlaceMarkerSuccess)
+    .catch(ui.onError)
 }
 
 module.exports = {
