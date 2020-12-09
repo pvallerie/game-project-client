@@ -11,9 +11,11 @@ const onNewGame = function (event) {
 }
 
 const onPlaceMarker = function () {
-  const cellIndex = $(this).data()
+  // grab index of gameboar location
+  const buttonData = $(this).data()
+  // grab value of that index
+  const cellIndex = buttonData.cellIndex
   const playerMarker = 'x'
-  console.log(store.user._id)
   // console.log(store.game.cell)
   // console.log(cellIndex, playerMarker)
   // if the index corresponding to the spot on the board is empty, player can
