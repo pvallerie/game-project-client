@@ -1,17 +1,17 @@
 const store = require('./../store')
 
 const onNewGameSuccess = function (response) {
-  console.log('response: ', response)
   // store the game object for access to game ID and cells
   store.game = response.game
-  console.log('stored game: ', store.game)
-  console.log(store)
 }
 
 const onPlaceMarkerSuccess = function (response) {
-  console.log(response)
   store.game = response.game
-  console.log(store.game)
+  console.log(store.game.cells)
+}
+
+const spaceTaken = function () {
+  $('#game-warning').show().text('Space taken! Please choose a different one.')
 }
 
 const onError = function (error) {
@@ -21,5 +21,6 @@ const onError = function (error) {
 module.exports = {
   onNewGameSuccess,
   onPlaceMarkerSuccess,
+  spaceTaken,
   onError
 }

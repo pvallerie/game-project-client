@@ -20,14 +20,14 @@ const placeMarker = function (cellIndex, playerMarker) {
       Authorization: 'Bearer ' + store.user.token
     },
     data: {
-      "game": {
-        "cell": {
-          "index": cellIndex,
-          "value": playerMarker
+      game: {
+        cell: {
+          index: cellIndex,
+          value: playerMarker
         },
-        "over": false
-        }
+        over: false
       }
+    }
   })
 }
 
