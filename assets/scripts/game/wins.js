@@ -3,6 +3,8 @@
 const gameArray = []
 
 const checkWins = function (gameArray) {
+  // declare function for checking if game array is populated
+  const isPopulated = (currentValue) => currentValue !== ''
   // check horizontal wins
   if (
     (gameArray[0] === 'x' && gameArray[1] === 'x' && gameArray[2] === 'x') ||
@@ -34,12 +36,15 @@ const checkWins = function (gameArray) {
     (gameArray[0] === 'o' && gameArray[4] === 'o' && gameArray[8] === 'o') ||
     (gameArray[2] === 'o' && gameArray[4] === 'o' && gameArray[6] === 'o')) {
     $('#game-message').html('Player O wins!')
+  } else if (gameArray.every(isPopulated) === true) {
+    $('#game-message').html('It is a tie!')
+    console.log('TIE!')
   }
 }
 
 checkWins(gameArray)
 
-
+// const newArray = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'x']
 
 
 // if each winning position has the same marker as the others for
