@@ -1,6 +1,7 @@
 const api = require('./api')
 const ui = require('./ui')
 const store = require('./../store')
+const wins = require('./wins')
 
 const onNewGame = function (event) {
   $('.game').show()

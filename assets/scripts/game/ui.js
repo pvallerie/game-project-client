@@ -1,4 +1,5 @@
 const store = require('./../store')
+const wins = require('./wins')
 
 const onNewGameSuccess = function (response) {
   // store the game object for access to game ID and cells
@@ -7,7 +8,17 @@ const onNewGameSuccess = function (response) {
 
 const onPlaceMarkerSuccess = function (response) {
   store.game = response.game
-  console.log(store.game.cells)
+  const gameArray = store.game.cells
+  // check for a win
+  wins.checkWins(gameArray)
+  // call checkWins function and pass it cellsArray
+  // if there is a win, #game-message tells user
+  // if #game-message text = PLayer X wins! or Player O wins!
+  if ($('#game-message').text() === 'Player X wins!') {
+  // then, break
+    console.log('SOMEBODY WON!')
+  }
+  // break
 }
 
 const spaceTaken = function () {
