@@ -20,6 +20,7 @@ const spaceTaken = function () {
 
 const onGameOverSuccess = function (response) {
   console.log('game object', response)
+  $('.gameboard-locations').off()
 }
 
 const onError = function (error) {

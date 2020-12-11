@@ -60,6 +60,7 @@ const onPlaceMarker = function () {
       .then(function (gameOver) {
         if (store.game.over === true) {
           console.log('GAME OVER!')
+          ui.onGameOverSuccess()
         } else {
           console.log('continue to play')
         }
