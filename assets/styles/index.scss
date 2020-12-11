@@ -5,15 +5,17 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 200px;
+  width: 250px;
   align-items: center;
   border: 1px solid black;
   border-radius: 2%;
   background-color: $board-color;
   input {
     border: 1px solid black;
-    border-radius: 10%;
-    margin: 2px;
+    border-radius: 5%;
+    margin: 2px 2px 5px 2px;
+    padding: 3px;
+    width: 99%;
   }
 }
 
@@ -21,4 +23,8 @@
     border: 1px solid;
     background-color: $board-color;
     height: 100px;
+}
+
+#or {
+  margin: 15px;
 }

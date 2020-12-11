@@ -12,7 +12,7 @@ const createNewGame = function (data) {
   })
 }
 
-const placeMarker = function (cellIndex, playerMarker) {
+const placeMarker = function (cellIndex, playerMarker, gameOver) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
@@ -25,11 +25,30 @@ const placeMarker = function (cellIndex, playerMarker) {
           index: cellIndex,
           value: playerMarker
         },
-        over: false
+        over: gameOver
       }
     }
   })
 }
+
+// const gameOver = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/games/' + store.game._id,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     },
+//     data: {
+//       game: {
+//         cell: {
+//           index: 0,
+//           value: 'x'
+//         },
+//         over: true
+//       }
+//     }
+//   })
+// }
 
 module.exports = {
   createNewGame,

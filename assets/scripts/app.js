@@ -18,6 +18,8 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   // show game board when 'new game' button is clicked
   $('#new-game').on('click', gameEvents.onNewGame)
-  // populate gameboard-location button text with an 'x' when clicked
-  $('.gameboard-locations').on('click', gameEvents.onPlaceMarker)
+  const gameboardLive = $('.gameboard-locations').on('click', gameEvents.onPlaceMarker)
+  module.exports = {
+    gameboardLive
+  }
 })

@@ -13,51 +13,61 @@ const onNewGame = function (event) {
 
 const onPlaceMarker = function () {
   console.log('CLICK')
-  // rotate players:
   // grab game array
-  const cellsArray = store.game.cells
+  const gameArray = store.game.cells
   const isX = marker => marker === 'x'
-  const arrayOfX = cellsArray.filter(isX)
+  const arrayOfX = gameArray.filter(isX)
   const isO = marker => marker === 'o'
-  const arrayOfO = cellsArray.filter(isO)
+  const arrayOfO = gameArray.filter(isO)
 
   // grab index data stored in button HTML
   const buttonData = $(this).data()
   // grab value of that index
   const cellIndex = buttonData.cellIndex
 
-  // if number of 'x's in cells array > number of 'o's, playerMarker = '0'
-  // else, playerMarker = 'x'
-  let playerMarker = 'x'
-  // if the index corresponding to the spot on the board is empty, player can
-  // place a marker
-  if (store.game.cells[cellIndex] === ('x' || 'o')) {
+  if (gameArray[cellIndex] === ('x' || 'o')) {
     ui.spaceTaken()
   } else {
     if (arrayOfX.length === 0) {
-      console.log('X goes')
       $(this).html('X')
-      playerMarker = 'x'
+      gameArray[cellIndex] = 'x'
       $('#game-message').html('Player O, it is your turn!')
     // if arrayOfX is not empty, but is equal to arrayOfO, X goes
     } else if (arrayOfX.length > arrayOfO.length) {
-      console.log('O goes')
       $(this).html('O')
-      playerMarker = 'o'
+      gameArray[cellIndex] = 'o'
       $('#game-message').html('Player X, it is your turn!')
     // else, O goes
     } else if (arrayOfX.length === arrayOfO.length) {
-      console.log('X goes')
       $(this).html('X')
-      playerMarker = 'x'
+      gameArray[cellIndex] = 'x'
       $('#game-message').html('Player O, it is your turn!')
     }
     $('#game-warning').hide()
+
+    // store updated game array in gameArray
+    const updatedGameArray = store.game.cells
+
+    // check for winner
+    wins.checkWins(updatedGameArray)
+    const gameOver = wins.checkWins(updatedGameArray)
+
+    // place corresponding marker in store.game.cells
+    // check for winner
     // place marker in the array 'user.game.cells' at the corresponding index
-    api.placeMarker(cellIndex, playerMarker)
+    api.placeMarker(cellIndex, gameArray[cellIndex], gameOver)
       .then(ui.onPlaceMarkerSuccess)
+      .then(function (gameOver) {
+        if (store.game.over === true) {
+          console.log('GAME OVER!')
+        } else {
+          console.log('continue to play')
+        }
+      })
       .catch(ui.onError)
   }
+  // else if game-message reads 'Player X wins!' or 'Player O wins!' or 'It is a tie!'
+  // then buttons don't work
 }
 
 module.exports = {
