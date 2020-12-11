@@ -1,12 +1,15 @@
 const store = require('./../store')
 const wins = require('./wins')
 const api = require('./api')
+const gameEvents = require('./events')
 
 const onNewGameSuccess = function (response) {
   // store the game object for access to game ID and cells
   store.game = response.game
   $('.gameboard-locations').html('')
   $('#win-message').html('')
+  $('.gameboard-locations').addClass('board-on').removeClass('board-off')
+  $('#game-message').html('Player X, it is your turn!')
 }
 
 const onPlaceMarkerSuccess = function (response) {
@@ -20,7 +23,7 @@ const spaceTaken = function () {
 
 const onGameOverSuccess = function (response) {
   console.log('game object', response)
-  $('.gameboard-locations').off()
+  $('.gameboard-locations').removeClass('board-on').addClass('board-off')
 }
 
 const onError = function (error) {
