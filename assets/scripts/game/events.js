@@ -71,7 +71,12 @@ const onPlaceMarker = function () {
   // then buttons don't work
 }
 
+const onGamesPlayed = function () {
+  console.log(api.gamesPlayed())
+}
+
 module.exports = {
   onNewGame,
-  onPlaceMarker
+  onPlaceMarker,
+  onGamesPlayed
 }

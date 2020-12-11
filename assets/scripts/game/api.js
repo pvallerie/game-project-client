@@ -31,6 +31,16 @@ const placeMarker = function (cellIndex, playerMarker, gameOver) {
   })
 }
 
+const gamesPlayed = function () {
+  return $.ajax ({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 // const gameOver = function () {
 //   return $.ajax({
 //     url: config.apiUrl + '/games/' + store.game._id,
@@ -52,5 +62,6 @@ const placeMarker = function (cellIndex, playerMarker, gameOver) {
 
 module.exports = {
   createNewGame,
-  placeMarker
+  placeMarker,
+  gamesPlayed
 }
