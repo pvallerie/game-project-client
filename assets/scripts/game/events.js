@@ -72,7 +72,9 @@ const onPlaceMarker = function () {
 }
 
 const onGamesPlayed = function () {
-  console.log(api.gamesPlayed())
+  api.gamesPlayed()
+    .then(ui.onGamesPlayedSuccess)
+    .catch(ui.onError)
 }
 
 module.exports = {

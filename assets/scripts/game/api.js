@@ -32,7 +32,7 @@ const placeMarker = function (cellIndex, playerMarker, gameOver) {
 }
 
 const gamesPlayed = function () {
-  return $.ajax ({
+  return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
     headers: {

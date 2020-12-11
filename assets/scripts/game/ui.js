@@ -26,6 +26,10 @@ const onGameOverSuccess = function (response) {
   $('.gameboard-locations').removeClass('board-on').addClass('board-off')
 }
 
+const onGamesPlayedSuccess = function (response) {
+  $('#num-games-played').html(response.games.length)
+}
+
 const onError = function (error) {
   $('#message').text('Error: ', error.responseJSON.message)
 }
@@ -35,5 +39,6 @@ module.exports = {
   onPlaceMarkerSuccess,
   spaceTaken,
   onGameOverSuccess,
+  onGamesPlayedSuccess,
   onError
 }
