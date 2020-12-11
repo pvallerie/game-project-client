@@ -16,25 +16,29 @@
 
       <h1>Tic Tac Toe</h1>
 
-      <div class="unauthenticated">
+      <div class="unauthenticated container">
         <form id="sign-up">
           <input placeholder="email" type="text" name="credentials[email]" />
           <input placeholder="password" type="text" name="credentials[password]" />
           <input placeholder="password confirmation" type="text" name="credentials[password_confirmation]" />
-          <button type="submit">Create Account</button>
+          <button type="submit" class="btn btn-outline-success">Create Account</button>
+
         </form>
+
+        <div id="or">OR</div>
 
         <form id="sign-in">
           <input placeholder="email" type="text" name="credentials[email]" />
           <input placeholder="password" type="text" name="credentials[password]" />
-          <button type="submit">Sign In</button>
+          <button type="submit" class="btn btn-outline-success">Sign In</button>
+
         </form>
       </div>
 
       <div class="authenticated">
         <button id="sign-out">Sign Out</button>
 
-        <div class="container">
+        <div class="gameboard">
           <div id="game-message" class="game">Player X, it's your turn!</div>
           <div id="game-warning" class="game"></div>
           <div id="gameboard" class="row game">

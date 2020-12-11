@@ -38,7 +38,6 @@ const checkWins = function (gameArray) {
     $('#game-message').html('Player O wins!')
   } else if (gameArray.every(isPopulated) === true) {
     $('#game-message').html('It is a tie!')
-    console.log('TIE!')
   }
 }
 

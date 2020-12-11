@@ -9,6 +9,7 @@ const gameEvents = require('./game/events')
 // require('./example')
 
 $(() => {
+  $('.gameboard-locations').html('1')
   // hide authenticated features
   $('.authenticated').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
