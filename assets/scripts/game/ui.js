@@ -9,6 +9,7 @@ const onNewGameSuccess = function (response) {
   $('.gameboard-locations').html('')
   $('#win-message').html('')
   $('.gameboard-locations').addClass('board-on').removeClass('board-off')
+  // $('.gameboard-locations').on('click', gameEvents.onPlaceMarker)
   $('#game-message').html('Player X, it is your turn!')
 }
 
@@ -24,6 +25,7 @@ const spaceTaken = function () {
 const onGameOverSuccess = function (response) {
   console.log('game object', response)
   $('.gameboard-locations').removeClass('board-on').addClass('board-off')
+  // $('.gameboard-locations').off()
 }
 
 const onGamesPlayedSuccess = function (response) {

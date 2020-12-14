@@ -2,7 +2,7 @@ const store = require('./../store')
 const api = require('./api')
 const ui = require('./ui')
 // const gameArray = []
-//
+
 const checkWins = function (gameArray) {
   // declare function for checking if game array is populated
   const isPopulated = (currentValue) => currentValue !== ''
@@ -52,15 +52,6 @@ const checkWins = function (gameArray) {
 }
 
 // const newArray = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'x']
-
-// if each winning position has the same marker as the others for
-// that particular winning combo, then there's a winning
-
-// if game array is full and no win, its a tie
-
-// if neither win, nor tie, keep playing
-
-// trigger api data object to say over: true
 
 module.exports = {
   checkWins

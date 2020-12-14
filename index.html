@@ -21,8 +21,8 @@
 
         <form id="sign-up">
           <input placeholder="email" type="text" name="credentials[email]" />
-          <input placeholder="password" type="text" name="credentials[password]" />
-          <input placeholder="password confirmation" type="text" name="credentials[password_confirmation]" />
+          <input placeholder="password" type="password" name="credentials[password]" />
+          <input placeholder="password confirmation" type="password" name="credentials[password_confirmation]" />
           <button type="submit" class="btn btn-outline-success">Create Account</button>
 
         </form>
@@ -31,7 +31,7 @@
 
         <form id="sign-in">
           <input placeholder="email" type="text" name="credentials[email]" />
-          <input placeholder="password" type="text" name="credentials[password]" />
+          <input placeholder="password" type="password" name="credentials[password]" />
           <button type="submit" class="btn btn-outline-success">Sign In</button>
 
         </form>
@@ -44,26 +44,6 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <!-- <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li> -->
             </ul>
               <button class="btn btn-outline-success my-2 my-sm-0"id="sign-out">Sign Out</button>
           </div>
@@ -95,8 +75,8 @@
         <button id="new-game">New Game</button>
 
         <form id="change-password">
-          <input placeholder="old password" type="text" name="passwords[old]" />
-          <input placeholder="new password" type="text" name="passwords[new]" />
+          <input placeholder="old password" type="password" name="passwords[old]" />
+          <input placeholder="new password" type="password" name="passwords[new]" />
           <button type="submit">Change Password</button>
         </form>
       </div>

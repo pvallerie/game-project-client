@@ -18,6 +18,6 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   // show game board when 'new game' button is clicked
   $('#new-game').on('click', gameEvents.onNewGame)
-  $('.gameboard-locations').on('click', gameEvents.onPlaceMarker)
+  $('.board-on').on('click', gameEvents.onPlaceMarker)
   $('#games-played').on('click', gameEvents.onGamesPlayed)
 })
