@@ -1,7 +1,7 @@
 const store = require('./../store')
-const wins = require('./wins')
-const api = require('./api')
-const gameEvents = require('./events')
+// const wins = require('./wins')
+// const api = require('./api')
+// const gameEvents = require('./events')
 
 const onNewGameSuccess = function (response) {
   // store the game object for access to game ID and cells
