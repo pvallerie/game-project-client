@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'variables.scss';
 
-.container {
+.form {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -10,6 +10,7 @@
   border: 1px solid black;
   border-radius: 2%;
   background-color: $board-color;
+  margin-top: 100px;
   input {
     border: 1px solid black;
     border-radius: 5%;
@@ -23,6 +24,10 @@
     border: 1px solid;
     background-color: $board-color;
     height: 100px;
+}
+
+.gameboard {
+  align-content: center;
 }
 
 #or {

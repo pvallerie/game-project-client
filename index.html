@@ -14,9 +14,11 @@
 
     <body>
 
-      <h1>Tic Tac Toe</h1>
+      <h2 class="unauthenticated">Tic Tac Toe</h2>
 
-      <div class="unauthenticated container">
+
+      <div class="unauthenticated form container">
+
         <form id="sign-up">
           <input placeholder="email" type="text" name="credentials[email]" />
           <input placeholder="password" type="text" name="credentials[password]" />
@@ -36,14 +38,47 @@
       </div>
 
       <div class="authenticated">
-        <button id="sign-out">Sign Out</button>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <h1 class="navbar-brand">Tic Tac Toe</h1>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li> -->
+            </ul>
+              <button class="btn btn-outline-success my-2 my-sm-0"id="sign-out">Sign Out</button>
+          </div>
+        </nav>
 
         <div class="gameboard">
-          <button id="games-played" type="button">Games Played</button>
-          <div id="num-games-played"></div>
-          <div id="game-message" class="game">Player X, it's your turn!</div>
-          <div id="win-message" class="game"></div>
-          <div id="game-warning" class="game"></div>
+          <div class="games-played">
+            <button id="games-played" type="button">Games Played</button>
+            <div id="num-games-played"></div>
+          </div>
+          <div class="messages">
+            <div id="game-message" class="game">Player X, it's your turn!</div>
+            <div id="win-message" class="game"></div>
+            <div id="game-warning" class="game"></div>
+          </div>
           <div id="gameboard" class="row game">
             <button data-cell-index="0" id="location-1" class="col-4 gameboard-locations board-on" type='button'>1</button>
             <button data-cell-index="1" id="location-2" class="col-4 gameboard-locations board-on" type='button'>1</button>

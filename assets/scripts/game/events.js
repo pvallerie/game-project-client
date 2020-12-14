@@ -25,7 +25,8 @@ const onPlaceMarker = function () {
   // grab value of that index
   const cellIndex = buttonData.cellIndex
 
-  if (gameArray[cellIndex] === ('x' || 'o')) {
+  // if (gameArray[cellIndex] === ('x' || 'o')) {
+  if ($(this).html() === ('X' || 'O')) {
     ui.spaceTaken()
   } else {
     if (arrayOfX.length === 0) {
