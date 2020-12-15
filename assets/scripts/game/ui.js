@@ -8,8 +8,6 @@ const onNewGameSuccess = function (response) {
   store.game = response.game
   $('.gameboard-locations').html('')
   $('#win-message').html('')
-  $('.gameboard-locations').addClass('board-on').removeClass('board-off')
-  // $('.gameboard-locations').on('click', gameEvents.onPlaceMarker)
   $('#game-message').html('Player X, it is your turn!')
 }
 
@@ -22,10 +20,9 @@ const spaceTaken = function () {
   $('#game-warning').show().text('Space taken! Please choose a different one.')
 }
 
-const onGameOverSuccess = function (response) {
-  console.log('game object', response)
-  $('.gameboard-locations').removeClass('board-on').addClass('board-off')
-  // $('.gameboard-locations').off()
+const onGameOverSuccess = function () {
+  console.log('disable board')
+  $('#gameboard').hide()
 }
 
 const onGamesPlayedSuccess = function (response) {
