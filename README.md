@@ -1,4 +1,4 @@
-# Game Project - Soothing Tic Tac Toe
+# Game Project: Soothing Tic Tac Toe
 
 This application allows the user to unwind by playing a game of tic tac toe where they always win, because they're always playing themselves. It enables the user to create an account, sign in, start a new game, play the game and know which player won (or if a tie), see how many times they've unwound with the app, change their password, and sign out.
 
@@ -9,6 +9,10 @@ This application allows the user to unwind by playing a game of tic tac toe wher
 [API Documentation Game Requests](https://git.generalassemb.ly/ga-wdi-boston/game-project-api/blob/master/docs/game.md)
 
 ## Planning Story
+
+The planning for this application began with closely reading over all the provided project materials provided by General Assembly - everything from the list of required features to API documentation. Then I created a list of user stories and a couple wireframes to set the foundation for what the application would do and how it would look. Once comfortable with this foundation, I wrote pseudo code for each feature to form a general understanding of how they might need to interact with each other and where they each might need to live within the repository. With a good foundation of pseudo code in place, I began to translate that pseudo code to actual code starting with minimal HTML/CSS to get a basic gameboard in place, then working feature by feature adding jQuery, Javascript, and more HTML/CSS as needed. Once the application had all the basic functionality that was required, I went back to adjust the HTML/CSS to make it look and feel more like I was hoping when originally drawing my wireframes.
+
+As I worked through each feature, some came to me very easily, but some proved to be pretty challenging. When I got to a point where what I was writing was not giving me the output I wanted, I would start by using `console.log()` or commenting out some code to see if I can get a deeper understanding of what is happening and why I'm not getting the output I want. If not able to narrow it down with those tactics, I would Google the problem or error message I was receiving and would frequently find myself on StackOverflow, MDN, or w3. These sites were very helpful, but didn't always do the trick. So if I was still stumped, I would next take a step away from the computer to give my mind a break and approach the problem with a fresh perspective a few minutes later. If still not able to come up with a solution, I would submit a ticket to our team of instructors outlining the problem I was trying to solve, relavant code, error messages (if applicable), my best guess at the source of the problem, and what troubleshooting I had already attempted. After submitting I'd also reach out to classmates to get their take on the situation as well. There were no problems that were not effectively solved with this strategy, and I intend to use something similar as I continue to grow as a software engineer.
 
 ### User Stories
 
@@ -35,6 +39,8 @@ Bootstrap
 jQuery
 AJAX
 JSON
+Git/GitHub
+Atom Code Editor
 
 ### Unsolved Problems
 
@@ -43,6 +49,11 @@ JSON
 - I'd like to eventually add a feature that enables the user to continue playing unfinished games.
 
 ## Images
+
+![Tic Tac Toe Screenshot (login)](https://i.imgur.com/YDxVz5c.png "Tic Tac Toe Screenshot (login)")
+
+![Tic Tac Toe Screenshot (gameboard)](https://i.imgur.com/mav77rY.png "Tic Tac Toe Screenshot (gameboard)")
+
 
 #### Wireframes:
 ![Tic Tac Toe Wireframe (mobile)](https://i.imgur.com/Mp3g2U0.jpg "Tic Tac Toe Wireframe (mobile)")
