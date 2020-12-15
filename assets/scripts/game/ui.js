@@ -7,13 +7,15 @@ const onNewGameSuccess = function (response) {
   // store the game object for access to game ID and cells
   store.game = response.game
   $('.gameboard-locations').html('')
-  $('#win-message').html('')
+  $('#message').show()
+  $('#message').html('New game created!')
   $('#game-message').html('Player X, it is your turn!')
 }
 
 const onPlaceMarkerSuccess = function (response) {
   store.game = response.game
   console.log('game object:', store.game)
+  $('#message').hide()
 }
 
 const spaceTaken = function () {
@@ -26,10 +28,12 @@ const onGameOverSuccess = function () {
 }
 
 const onGamesPlayedSuccess = function (response) {
-  $('#num-games-played').html(response.games.length)
+  const gamesPlayed = response.games.length
+  $('#num-games-played').html(`You have played ${gamesPlayed} games...now go outside!`)
 }
 
 const onError = function (error) {
+  $('#message').show()
   $('#message').text('Error: ', error.responseJSON.message)
 }
 

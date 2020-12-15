@@ -5,11 +5,13 @@ const resetForms = function () {
 }
 
 const onSignUpSuccess = function (response) {
-  $('#message').text('Account created!')
+  $('#account-message').show()
+  $('#account-message').text('Account created!')
   resetForms()
 }
 
 const onSignInSuccess = function (response) {
+  $('#message').show()
   $('#message').text('Sign In successful!')
   // store the user object so we can use token later with authorized events
   store.user = response.user
@@ -29,7 +31,9 @@ const onChangePasswordSuccess = function (response) {
 }
 
 const onSignOutSuccess = function () {
-  $('#message').text('Sign Out successful!')
+  $('#message').hide()
+  $('#account-message').show()
+  $('#account-message').text('Sign Out successful!')
   // hide authenticated features
   // unhide unauthenticated features
   $('.authenticated').hide()
@@ -38,7 +42,7 @@ const onSignOutSuccess = function () {
 }
 
 const onError = function (error) {
-  $('#message').text('Error: ' + error.responseJSON.message)
+  $('#account-message').text('Error: ' + error.responseJSON.message)
   resetForms()
 }
 
