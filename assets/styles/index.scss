@@ -7,12 +7,12 @@
   padding: 10px;
   width: 250px;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 2%;
   background-color: $board-color;
   margin-top: 100px;
   input {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5%;
     margin: 2px 2px 5px 2px;
     padding: 3px;
@@ -36,9 +36,10 @@
 
 .logo {
   font-family: $logo-font;
+  color: white;
   background-color: $logo-background-color;
 }
 
-.nav {
+#navbar {
   background-color: $logo-background-color;
 }

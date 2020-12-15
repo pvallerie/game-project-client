@@ -5,7 +5,7 @@ const resetForms = function () {
 }
 
 const onSignUpSuccess = function (response) {
-  $('#message').text('Sign Up successful!')
+  $('#message').text('Account created!')
   resetForms()
 }
 

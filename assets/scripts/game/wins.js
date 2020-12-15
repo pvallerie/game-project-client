@@ -1,6 +1,6 @@
 const store = require('./../store')
-const api = require('./api')
-const ui = require('./ui')
+// const api = require('./api')
+// const ui = require('./ui')
 // const gameArray = []
 
 const checkWins = function (gameArray) {
