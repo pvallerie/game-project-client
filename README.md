@@ -4,9 +4,9 @@ This application allows the user to unwind by playing a game of tic tac toe wher
 
 ## Important Links
 
-[Requirements](https://git.generalassemb.ly/ga-wdi-boston/game-project/blob/master/requirements.md)
-[API Documentation Auth Requests](https://git.generalassemb.ly/ga-wdi-boston/game-project-api/blob/master/docs/user.md)
-[API Documentation Game Requests](https://git.generalassemb.ly/ga-wdi-boston/game-project-api/blob/master/docs/game.md)
+- [Requirements](https://git.generalassemb.ly/ga-wdi-boston/game-project/blob/master/requirements.md)
+- [API Documentation Auth Requests](https://git.generalassemb.ly/ga-wdi-boston/game-project-api/blob/master/docs/user.md)
+- [API Documentation Game Requests](https://git.generalassemb.ly/ga-wdi-boston/game-project-api/blob/master/docs/game.md)
 
 ## Planning Story
 
@@ -33,14 +33,14 @@ As I worked through each feature, some came to me very easily, but some proved t
 
 ### Technologies Used
 
-Javascript
-HTML/CSS/SCSS
-Bootstrap
-jQuery
-AJAX
-JSON
-Git/GitHub
-Atom Code Editor
+- Javascript
+- HTML/CSS/SCSS
+- Bootstrap
+- jQuery
+- AJAX
+- JSON
+- Git/GitHub
+- Atom Code Editor
 
 ### Unsolved Problems
 
